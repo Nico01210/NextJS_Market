@@ -1,6 +1,5 @@
 * {
   padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -24,24 +23,33 @@ body {
 
 h1 {
   text-align: center;
-  margin-top: 100px;
   font-size: 110px;
   font-family: 'Times New Roman', Times, serif;
   font-weight: bold;
-  color: beige;
+}
+h2 {
+  display: flex;
+  justify-content: center;
 }
 
 p {
   display: flex;
   text-align: center;
   justify-content: center;
-}
 
+}
+.card-body {
+  background-color: rgb(248, 248, 241);
+  
+}
 /* Navbar styles */
 .navbar {
   padding: 1rem 2rem;
 }
-
+.form 
+{
+  background-color: rebeccapurple;
+}
 .navbar-brand {
   font-size: 1.5rem;
   letter-spacing: 1px;
@@ -54,6 +62,9 @@ p {
 
 .nav-link:hover {
   transform: translateY(-2px);
+}
+footer {
+  margin-top: 0; /* removed extra gap so footer sits flush with page flow */
 }
 
 /* Hero section avec image de fond */
@@ -95,4 +106,143 @@ p {
   border-radius: 50px;
   margin-top: 2rem;
   background-color:beige;
+}
+.btn-decouvrir:hover {
+  background-color: #fff;
+}
+.btn-submit {
+  background-color: #212529;
+  color: #fff;
+  border: none;
+}
+.btn-submit:hover,
+.btn-submit:focus {
+  background-color: #343a40; /* Un peu plus clair au survol */
+  color: #fff;
+}
+
+/* Style de fond pour le formulaire de contact */
+.form-section {
+  background-color: rgb(248, 248, 241);
+  padding: 1.25rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+.description-titre {
+  color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  .form-section {
+    background: rgba(20,20,20,0.85);
+    border-color: rgba(255,255,255,0.04);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
+}
+
+.titre-principal {
+  color: beige;
+
+}
+
+/* Espacement spécifique entre h1 et le formulaire de contact */
+.contact-page-title {
+  margin-bottom: 80px;
+}
+
+.about-page-title h2 {
+  margin-bottom: 200px;
+}
+.valeurs-section {
+  margin-top: 80px;
+}
+.engagements-section {
+  margin-top: 80px;
+}
+
+/* Encadrement réutilisable pour les sections */
+.section-box {
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 1.25rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .section-box {
+    background: #0f0f10;
+    border-color: rgba(255,255,255,0.04);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  }
+}
+
+/* Appliquer un padding un peu plus large sur les sections existantes */
+.legacy-section.section-box,
+.engagements-section.section-box {
+  padding: 1.75rem;
+  background-color: rgb(248, 248, 241);
+}
+
+/* Forcer le texte à s'aligner à gauche dans la section "Nos engagements" */
+.engagements-section p,
+.engagements-section .about-list,
+.valeurs-section p {
+  display: block; /* annule le display:flex global pour ces paragraphes */
+  text-align: left;
+}
+
+/* Styles améliorés pour listes à puces (plus visibles) */
+.about-list {
+  list-style: none; /* on remplace le marker par un pseudo-element */
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.about-list li {
+  position: relative;
+  padding: 0.6rem 1rem 0.6rem 3rem;
+  background: rgba(0,0,0,0.03);
+  border-radius: 8px;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+}
+
+.about-list li::before {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px; /* carré légèrement arrondi */
+  background: #4ecd54; /* couleur principale */
+  box-shadow: 0 1px 2px rgba(0,0,0,0.12);
+  border: 2px solid rgba(255,255,255,0.6);
+}
+
+.about-list li strong {
+  margin-right: 0.5rem;
+}
+/* Encadré propre pour les sections */
+.section-box {
+  background: #ffffff;               /* fond (changez la couleur si dark mode) */
+  border: 1px solid rgba(0,0,0,0.08);
+  padding: 1.25rem;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+}
+/* Responsive: réduire padding sur petits écrans */
+@media (max-width: 576px) {
+  .about-list li {
+    padding-left: 2.5rem;
+    font-size: 0.95rem;
+  }
+  .about-list li::before {
+    left: 0.9rem;
+    width: 10px;
+    height: 10px;
+  }
 }

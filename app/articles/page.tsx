@@ -14,7 +14,7 @@ const produits = [
 export default function Articles() {
     return (
         <Layout>
-            <div className="container py-5">
+            <div className="container">
                 <h1 className="text-center mb-5">Nos Produits</h1>
                 <div className="row g-4">
                     {produits.map((produit) => (
